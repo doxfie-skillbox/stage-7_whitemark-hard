@@ -1,0 +1,42 @@
+.apartments {
+  padding: 80px 0 0;
+
+  &__wrapper {
+    column-gap: 220px;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 420px 360px;
+  }
+
+  &__icon {
+    display: flex;
+    margin: 0 0 32px;
+    pointer-events: none;
+  }
+
+  &__description {
+    margin: 0 0 32px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__text {
+    margin: 0 0 16px;
+    font-weight: 300;
+    line-height: 22px;
+  }
+
+  &__list {
+    row-gap: 4px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 0 0 16px;
+  }
+
+  &__list-item {
+    font-weight: 300;
+    line-height: 22px;
+  }
+}
