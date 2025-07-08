@@ -16,6 +16,12 @@
     min-height: 400px;
   }
 
+  @include vp-767 {
+    width: 260px;
+    min-height: 350px;
+    padding: 10px;
+  }
+
   &--round-all {
     border-radius: 180px;
   }
@@ -34,6 +40,14 @@
     @media (min-resolution: 2dppx) and (max-width: $vp-tablet) {
       background-image: url("../../images/image-apartment-tablet@2x.jpg");
     }
+
+    @include vp-767 {
+      background-image: url("../../images/image-apartment-mobile.jpg");
+    }
+
+    @media (min-resolution: 2dppx) and (max-width: $vp-mobile) {
+      background-image: url("../../images/image-apartment-mobile@2x.jpg");
+    }
   }
 
   &--pond {
@@ -50,6 +64,14 @@
     @media (min-resolution: 2dppx) and (max-width: $vp-tablet) {
       background-image: url("../../images/image-pond-tablet@2x.jpg");
     }
+
+    @include vp-767 {
+      background-image: url("../../images/image-pond-mobile.jpg");
+    }
+
+    @media (min-resolution: 2dppx) and (max-width: $vp-mobile) {
+      background-image: url("../../images/image-pond-mobile@2x.jpg");
+    }
   }
 
   &--entrance {
@@ -63,8 +85,12 @@
       background-image: url("../../images/image-view-entrance-building-tablet.jpg");
     }
 
-    @media (min-resolution: 2dppx) {
+    @media (min-resolution: 2dppx) and (max-width: $vp-tablet) {
       background-image: url("../../images/image-view-entrance-building-tablet@2x.jpg");
+    }
+
+    @include vp-767 {
+      display: none;
     }
   }
 
@@ -73,10 +99,15 @@
     font-size: 80px;
     font-family: $ff-ardeco;
     line-height: 60px;
-    
+
     @include vp-1023 {
       margin: 0 0 8px;
       font-size: 60px;
+    }
+
+    @include vp-767 {
+      font-size: 56px;
+      line-height: 50px;
     }
   }
 
@@ -90,6 +121,12 @@
     @include vp-1023 {
       font-size: 18px;
       line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+      margin: 0 0 20px;
     }
   }
 
