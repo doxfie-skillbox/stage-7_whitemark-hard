@@ -17,14 +17,26 @@
 
   &--apartment {
     background-image: url("../../images/image-apartment.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/image-apartment@2x.jpg");
+    }
   }
 
   &--pond {
     background-image: url("../../images/image-pond.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/image-pond@2x.jpg");
+    }
   }
 
   &--entrance {
     background-image: url("../../images/image-view-entrance-building.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/image-view-entrance-building@2x.jpg");
+    }
   }
 
   &__number {

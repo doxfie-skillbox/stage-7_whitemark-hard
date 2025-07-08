@@ -351,16 +351,6 @@ main {
   flex-grow: 1;
   padding: 120px 0 0;
 }
-@media (max-width: 1023px) {
-  main {
-    padding: 80px 0 0;
-  }
-}
-@media (max-width: 767px) {
-  main {
-    padding: 70px 0 0;
-  }
-}
 
 img {
   display: block;
@@ -379,16 +369,6 @@ a {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 50px;
-}
-@media (max-width: 1023px) {
-  .container {
-    padding: 0 20px;
-  }
-}
-@media (max-width: 767px) {
-  .container {
-    padding: 0 15px;
-  }
 }
 
 .visually-hidden {
@@ -562,11 +542,26 @@ a {
 .benefit--apartment {
   background-image: url("../../images/image-apartment.jpg");
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .benefit--apartment {
+    background-image: url("../../images/image-apartment@2x.jpg");
+  }
+}
 .benefit--pond {
   background-image: url("../../images/image-pond.jpg");
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .benefit--pond {
+    background-image: url("../../images/image-pond@2x.jpg");
+  }
+}
 .benefit--entrance {
   background-image: url("../../images/image-view-entrance-building.jpg");
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .benefit--entrance {
+    background-image: url("../../images/image-view-entrance-building@2x.jpg");
+  }
 }
 .benefit__number {
   margin: 0 0 16px;
@@ -630,7 +625,7 @@ a {
 }
 
 .privacy {
-  padding: 80px 0 0;
+  padding: 70px 0 0;
 }
 .privacy__wrapper {
   -moz-column-gap: 220px;
