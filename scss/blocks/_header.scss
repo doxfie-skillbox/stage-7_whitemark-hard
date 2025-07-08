@@ -1,12 +1,16 @@
 .header {
   padding: 16px 0;
-  position:fixed;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 10;
   box-shadow: 0px 30px 20px 0px rgba($color-cerulean-blue, 0.8);
   background-color: $color-cerulean-blue;
+  
+  @include vp-1023 {
+    padding: 10px 0;
+  }
 
   &__container {
     display: grid;
@@ -14,6 +18,10 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 50px;
+
+    @include vp-1023 {
+      padding: 0 20px;
+    }
   }
 
   &__left,
@@ -24,10 +32,21 @@
 
   &__left {
     column-gap: 142px;
+
+    @include vp-1023 {
+      column-gap: 36px;
+    }
   }
 
   &__home-link {
     display: flex;
+  }
+
+  &__home-icon {
+    @include vp-1023 {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &__right {
@@ -39,25 +58,46 @@
     display: flex;
   }
 
+  &__logo-image {
+    @include vp-1023 {
+      width: 140px;
+      height: 60px;
+    }
+  }
+
   &__language-link {
     font-size: 18px;
     line-height: 24px;
     text-transform: uppercase;
+
+    @include vp-1023 {
+      display: none;
+    }
   }
 
   &__favorites-link {
     display: flex;
+
+    @include vp-1023 {
+      display: none;
+    }
   }
 
   &__text {
     font-size: 18px;
     line-height: 24px;
     text-transform: uppercase;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 
   &__btn {
+    width: 165px;
     margin: 0 20px 0 0;
-    padding: 10px 18px;
+    padding: 10px;
     font-size: 13px;
     font-family: inherit;
     line-height: 16px;
@@ -66,11 +106,24 @@
     border: 2px solid $color-white;
     border-radius: 60px;
     cursor: pointer;
+
+    @include vp-1023 {
+      width: 128px;
+      margin: 0;
+      padding: 8px;
+      font-size: 10px;
+      line-height: 12px;
     }
+  }
 
   &__phone {
     font-size: 18px;
     line-height: 24px;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 
   &__phone-icon {
