@@ -1,6 +1,10 @@
 .hero {
   padding: 48px 0 0;
 
+  @include vp-1023 {
+    padding: 40px 0 0;
+  }
+
   &__heading {
     margin: 0;
     font-size: 70px;
@@ -9,6 +13,11 @@
     line-height: 70px;
     text-align: center;
     text-transform: uppercase;
+
+    @include vp-1023 {
+      font-size: 50px;
+      line-height: 50px;
+    }
   }
 
   &__img-wrapper {
