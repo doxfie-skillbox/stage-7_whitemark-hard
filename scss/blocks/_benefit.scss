@@ -74,6 +74,30 @@
     }
   }
 
+  &--pond-2 {
+    background-image: url("../../images/image-pond-2.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/image-pond-2@2x.jpg");
+    }
+
+    @include vp-1023 {
+      background-image: url("../../images/image-pond-2-tablet.jpg");
+    }
+
+    @media (min-resolution: 2dppx) and (max-width: $vp-tablet) {
+      background-image: url("../../images/image-pond-2-tablet@2x.jpg");
+    }
+
+    @include vp-767 {
+      background-image: url("../../images/image-pond-2-mobile.jpg");
+    }
+
+    @media (min-resolution: 2dppx) and (max-width: $vp-mobile) {
+      background-image: url("../../images/image-pond-2-mobile@2x.jpg");
+    }
+  }
+
   &--entrance {
     background-image: url("../../images/image-view-entrance-building.jpg");
 
@@ -92,6 +116,49 @@
     @include vp-767 {
       display: none;
     }
+  }
+
+  &--yard {
+    background-image: url("../../images/image-view-yard.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/image-view-yard@2x.jpg");
+    }
+
+    @include vp-1023 {
+      background-image: url("../../images/image-view-yard-tablet.jpg");
+    }
+
+    @media (min-resolution: 2dppx) and (max-width: $vp-tablet) {
+      background-image: url("../../images/image-view-yard-tablet@2x.jpg");
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &--sleep {
+    background-image: url("../../images/image-sleeping-child.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/image-sleeping-child@2x.jpg");
+    }
+  }
+
+  &--interior {
+    background-image: url("../../images/image-apartment-interior.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/image-apartment-interior@2x.jpg");
+    }
+  }
+
+  &--plain {
+    width: 420px;
+    height: 500px;
+    border: unset;
+    border-radius: unset;
   }
 
   &__number {
@@ -131,7 +198,9 @@
   }
 
   &__icon {
-    width: 50px;
-    height: 8px;
+    @include vp-1023 {
+      width: 50px;
+      height: 8px;
+    }
   }
 }
