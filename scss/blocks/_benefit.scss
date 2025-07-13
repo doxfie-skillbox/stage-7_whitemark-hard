@@ -223,14 +223,6 @@
       font-size: 56px;
       line-height: 50px;
     }
-
-    &--quiet-privacy {
-      @include vp-1023 {
-        margin: 0 0 8px;
-        font-size: 56px;
-        line-height: 50px;
-      }
-    }
   }
 
   &__text {
