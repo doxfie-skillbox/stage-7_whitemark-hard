@@ -33,10 +33,6 @@
     @include vp-1023 {
       height: unset;
     }
-
-    @include vp-767 {
-      margin: 24px 0 0;
-    }
   }
 
   &__content {
@@ -51,6 +47,11 @@
     &--quiet-privacy {
       @include vp-1023 {
         top: 59%;
+      }
+
+      @include vp-767 {
+        width: 225px;
+        top: 49%;
       }
     }
   }

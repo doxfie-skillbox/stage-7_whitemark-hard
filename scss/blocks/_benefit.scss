@@ -134,7 +134,11 @@
     }
 
     @include vp-767 {
-      display: none;
+      background-image: url("../../images/image-view-yard-mobile.jpg");
+    }
+
+    @media (min-resolution: 2dppx) and (max-width: $vp-tablet) {
+      background-image: url("../../images/image-view-yard-mobile@2x.jpg");
     }
   }
 
@@ -152,6 +156,14 @@
     @media (min-resolution: 2dppx) and (max-width: $vp-tablet) {
       background-image: url("../../images/image-sleeping-child-tablet@2x.jpg");
     }
+
+    @include vp-767 {
+      background-image: url("../../images/image-sleeping-child-mobile.jpg");
+    }
+
+    @media (min-resolution: 2dppx) and (max-width: $vp-tablet) {
+      background-image: url("../../images/image-sleeping-child-mobile@2x.jpg");
+    }
   }
 
   &--interior {
@@ -168,6 +180,14 @@
     @media (min-resolution: 2dppx) and (max-width: $vp-tablet) {
       background-image: url("../../images/image-apartment-interior-tablet@2x.jpg");
     }
+
+    @include vp-767 {
+      background-image: url("../../images/image-apartment-interior-mobile.jpg");
+    }
+
+    @media (min-resolution: 2dppx) and (max-width: $vp-tablet) {
+      background-image: url("../../images/image-apartment-interior-mobile@2x.jpg");
+    }
   }
 
   &--plain {
@@ -180,6 +200,11 @@
     @include vp-1023 {
       width: 270px;
       min-height: 320px;
+    }
+
+    @include vp-767 {
+      width: 345px;
+      min-height: 410px;
     }
   }
 

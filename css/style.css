@@ -593,6 +593,12 @@ a {
          column-gap: 48px;
   }
 }
+@media (max-width: 767px) {
+  .hero__content {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+}
 .hero__heading {
   margin: 0;
   font-size: 70px;
@@ -614,8 +620,13 @@ a {
     line-height: 40px;
   }
 }
-.hero__heading--left {
+.hero__heading--left-desktop {
   text-align: left;
+}
+@media (max-width: 767px) {
+  .hero__heading--left-desktop {
+    text-align: center;
+  }
 }
 .hero__description {
   max-width: 420px;
@@ -628,6 +639,13 @@ a {
   .hero__description {
     font-size: 16px;
     line-height: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .hero__description {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
   }
 }
 .hero__img-wrapper {
@@ -934,7 +952,12 @@ a {
 }
 @media (max-width: 767px) {
   .benefit--yard {
-    display: none;
+    background-image: url("../../images/image-view-yard-mobile.jpg");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), (min-resolution: 2dppx) and (max-width: 1023px) {
+  .benefit--yard {
+    background-image: url("../../images/image-view-yard-mobile@2x.jpg");
   }
 }
 .benefit--sleep {
@@ -955,6 +978,16 @@ a {
     background-image: url("../../images/image-sleeping-child-tablet@2x.jpg");
   }
 }
+@media (max-width: 767px) {
+  .benefit--sleep {
+    background-image: url("../../images/image-sleeping-child-mobile.jpg");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), (min-resolution: 2dppx) and (max-width: 1023px) {
+  .benefit--sleep {
+    background-image: url("../../images/image-sleeping-child-mobile@2x.jpg");
+  }
+}
 .benefit--interior {
   background-image: url("../../images/image-apartment-interior.jpg");
 }
@@ -973,6 +1006,16 @@ a {
     background-image: url("../../images/image-apartment-interior-tablet@2x.jpg");
   }
 }
+@media (max-width: 767px) {
+  .benefit--interior {
+    background-image: url("../../images/image-apartment-interior-mobile.jpg");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), (min-resolution: 2dppx) and (max-width: 1023px) {
+  .benefit--interior {
+    background-image: url("../../images/image-apartment-interior-mobile@2x.jpg");
+  }
+}
 .benefit--plain {
   width: 420px;
   min-height: 500px;
@@ -984,6 +1027,12 @@ a {
   .benefit--plain {
     width: 270px;
     min-height: 320px;
+  }
+}
+@media (max-width: 767px) {
+  .benefit--plain {
+    width: 345px;
+    min-height: 410px;
   }
 }
 .benefit__number {
@@ -1187,6 +1236,11 @@ a {
     grid-template-columns: 1fr 270px;
   }
 }
+@media (max-width: 767px) {
+  .privacy__wrapper--quiet-privacy {
+    grid-template-columns: 1fr;
+  }
+}
 .privacy__content {
   display: flex;
   flex-direction: column;
@@ -1261,6 +1315,11 @@ a {
 .privacy__list--margin {
   margin: 0 0 16px;
 }
+@media (max-width: 767px) {
+  .privacy__list--margin {
+    margin: 0 0 12px;
+  }
+}
 .privacy__link {
   -moz-column-gap: 12px;
        column-gap: 12px;
@@ -1295,6 +1354,11 @@ a {
   display: flex;
   flex-direction: column;
   gap: 80px;
+}
+@media (max-width: 767px) {
+  .privacy__inner {
+    gap: 60px;
+  }
 }
 
 .advantages {
@@ -1652,6 +1716,11 @@ a {
   flex-direction: column;
   gap: 80px;
 }
+@media (max-width: 767px) {
+  .location__inner {
+    gap: 60px;
+  }
+}
 .location__top {
   display: flex;
   flex-direction: column;
@@ -1659,6 +1728,11 @@ a {
   gap: 32px;
   max-width: 620px;
   margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .location__top {
+    gap: 24px;
+  }
 }
 .location__icon {
   display: flex;
@@ -1668,11 +1742,6 @@ a {
   .location__icon {
     width: 50px;
     height: 8px;
-  }
-}
-@media (max-width: 767px) {
-  .location__icon {
-    margin: 0 0 24px;
   }
 }
 .location__description {
@@ -1716,9 +1785,21 @@ a {
   }
 }
 .location__wrapper--plain {
-  grid-template-columns: 270px 1fr;
-  -moz-column-gap: 118px;
-       column-gap: 118px;
+  grid-template-columns: 420px 1fr;
+  -moz-column-gap: 160px;
+       column-gap: 160px;
+}
+@media (max-width: 1023px) {
+  .location__wrapper--plain {
+    grid-template-columns: 270px 1fr;
+    -moz-column-gap: 118px;
+         column-gap: 118px;
+  }
+}
+@media (max-width: 767px) {
+  .location__wrapper--plain {
+    grid-template-columns: 1fr;
+  }
 }
 .location__heading {
   max-width: 480px;
@@ -1756,7 +1837,7 @@ a {
 }
 @media (max-width: 767px) {
   .location__text {
-    margin: 0 0 12px;
+    margin: 0;
     font-size: 12px;
     line-height: 18px;
   }
@@ -1843,11 +1924,6 @@ a {
     height: unset;
   }
 }
-@media (max-width: 767px) {
-  .unique-apartment__image {
-    margin: 24px 0 0;
-  }
-}
 .unique-apartment__content {
   display: flex;
   flex-direction: column;
@@ -1860,5 +1936,11 @@ a {
 @media (max-width: 1023px) {
   .unique-apartment__content--quiet-privacy {
     top: 59%;
+  }
+}
+@media (max-width: 767px) {
+  .unique-apartment__content--quiet-privacy {
+    width: 225px;
+    top: 49%;
   }
 }/*# sourceMappingURL=style.css.map */

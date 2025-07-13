@@ -9,6 +9,10 @@
     display: flex;
     flex-direction: column;
     gap: 80px;
+
+    @include vp-767 {
+      gap: 60px;
+    }
   }
 
   &__top {
@@ -18,6 +22,10 @@
     gap: 32px;
     max-width: 620px;
     margin: 0 auto;
+
+    @include vp-767 {
+      gap: 24px;
+    }
   }
 
   &__icon {
@@ -27,10 +35,6 @@
     @include vp-1023 {
       width: 50px;
       height: 8px;
-    }
-
-    @include vp-767 {
-      margin: 0 0 24px;
     }
   }
 
@@ -70,8 +74,17 @@
     }
 
     &--plain {
-      grid-template-columns: 270px 1fr;
-      column-gap: 118px;
+      grid-template-columns: 420px 1fr;
+      column-gap: 160px;
+      
+      @include vp-1023 {
+        grid-template-columns: 270px 1fr;
+        column-gap: 118px;
+      }
+
+      @include vp-767 {
+        grid-template-columns: 1fr;
+      }
     }
   }
 
@@ -108,7 +121,7 @@
     }
 
     @include vp-767 {
-      margin: 0 0 12px;
+      margin: 0;
       font-size: 12px;
       line-height: 18px;
     }
