@@ -10,10 +10,10 @@
     display: grid;
     justify-content: space-between;
     align-items: center;
-    grid-template-columns: 360px 420px;
+    grid-template-columns: 1fr 420px;
 
     @include vp-1023 {
-      grid-template-columns: 300px 340px;
+      grid-template-columns: 1fr 340px;
       column-gap: 88px;
     }
 
@@ -21,6 +21,12 @@
       grid-template-columns: 1fr;
       justify-items: center;
       gap: 32px;
+    }
+    
+    &--quiet-privacy {
+      @include vp-1023 {
+        grid-template-columns: 1fr 270px;
+      }
     }
   }
 

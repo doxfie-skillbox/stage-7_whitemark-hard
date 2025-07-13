@@ -47,5 +47,11 @@
     top: 62%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    &--quiet-privacy {
+      @include vp-1023 {
+        top: 59%;
+      }
+    }
   }
 }

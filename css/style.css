@@ -581,8 +581,17 @@ a {
   }
 }
 .hero__content {
-  display: flex;
-  gap: 120px;
+  display: grid;
+  grid-template-columns: 360px 420px;
+  -moz-column-gap: 220px;
+       column-gap: 220px;
+}
+@media (max-width: 1023px) {
+  .hero__content {
+    grid-template-columns: 340px 340px;
+    -moz-column-gap: 48px;
+         column-gap: 48px;
+  }
 }
 .hero__heading {
   margin: 0;
@@ -615,6 +624,12 @@ a {
   font-size: 20px;
   line-height: 26px;
 }
+@media (max-width: 1023px) {
+  .hero__description {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
 .hero__img-wrapper {
   position: relative;
 }
@@ -636,6 +651,9 @@ a {
   .hero__img-wrapper::after {
     height: 50px;
   }
+}
+.hero__img-wrapper--no-gradient::after {
+  background: none;
 }
 .hero__image {
   width: 100%;
@@ -927,6 +945,16 @@ a {
     background-image: url("../../images/image-sleeping-child@2x.jpg");
   }
 }
+@media (max-width: 1023px) {
+  .benefit--sleep {
+    background-image: url("../../images/image-sleeping-child-tablet.jpg");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), (min-resolution: 2dppx) and (max-width: 1023px) {
+  .benefit--sleep {
+    background-image: url("../../images/image-sleeping-child-tablet@2x.jpg");
+  }
+}
 .benefit--interior {
   background-image: url("../../images/image-apartment-interior.jpg");
 }
@@ -935,11 +963,28 @@ a {
     background-image: url("../../images/image-apartment-interior@2x.jpg");
   }
 }
+@media (max-width: 1023px) {
+  .benefit--interior {
+    background-image: url("../../images/image-apartment-interior-tablet.jpg");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), (min-resolution: 2dppx) and (max-width: 1023px) {
+  .benefit--interior {
+    background-image: url("../../images/image-apartment-interior-tablet@2x.jpg");
+  }
+}
 .benefit--plain {
   width: 420px;
-  height: 500px;
+  min-height: 500px;
   border: unset;
   border-radius: unset;
+  padding: 0;
+}
+@media (max-width: 1023px) {
+  .benefit--plain {
+    width: 270px;
+    min-height: 320px;
+  }
 }
 .benefit__number {
   margin: 0 0 16px;
@@ -955,6 +1000,13 @@ a {
 }
 @media (max-width: 767px) {
   .benefit__number {
+    font-size: 56px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 1023px) {
+  .benefit__number--quiet-privacy {
+    margin: 0 0 8px;
     font-size: 56px;
     line-height: 50px;
   }
@@ -977,6 +1029,13 @@ a {
     font-size: 16px;
     line-height: 18px;
     margin: 0 0 20px;
+  }
+}
+@media (max-width: 1023px) {
+  .benefit__text--quiet-privacy {
+    margin: 0 0 20px;
+    font-size: 16px;
+    line-height: 18px;
   }
 }
 @media (max-width: 1023px) {
@@ -1107,11 +1166,11 @@ a {
   display: grid;
   justify-content: space-between;
   align-items: center;
-  grid-template-columns: 360px 420px;
+  grid-template-columns: 1fr 420px;
 }
 @media (max-width: 1023px) {
   .privacy__wrapper {
-    grid-template-columns: 300px 340px;
+    grid-template-columns: 1fr 340px;
     -moz-column-gap: 88px;
          column-gap: 88px;
   }
@@ -1121,6 +1180,11 @@ a {
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 32px;
+  }
+}
+@media (max-width: 1023px) {
+  .privacy__wrapper--quiet-privacy {
+    grid-template-columns: 1fr 270px;
   }
 }
 .privacy__content {
@@ -1592,12 +1656,12 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 32px;
   max-width: 620px;
   margin: 0 auto;
 }
 .location__icon {
   display: flex;
-  margin: 0 0 32px;
   pointer-events: none;
 }
 @media (max-width: 1023px) {
@@ -1621,14 +1685,12 @@ a {
   .location__description {
     font-size: 16px;
     line-height: 22px;
-    margin: 0 0 24px;
   }
 }
 @media (max-width: 767px) {
   .location__description {
     font-size: 14px;
     line-height: 20px;
-    margin: 0 0 20px;
   }
 }
 .location__wrapper {
@@ -1642,7 +1704,6 @@ a {
 @media (max-width: 1023px) {
   .location__wrapper {
     grid-template-columns: 340px 1fr;
-    align-items: start;
     -moz-column-gap: 88px;
          column-gap: 88px;
   }
@@ -1655,8 +1716,9 @@ a {
   }
 }
 .location__wrapper--plain {
-  -moz-column-gap: 160px;
-       column-gap: 160px;
+  grid-template-columns: 270px 1fr;
+  -moz-column-gap: 118px;
+       column-gap: 118px;
 }
 .location__heading {
   max-width: 480px;
@@ -1794,4 +1856,9 @@ a {
   top: 62%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (max-width: 1023px) {
+  .unique-apartment__content--quiet-privacy {
+    top: 59%;
+  }
 }/*# sourceMappingURL=style.css.map */
