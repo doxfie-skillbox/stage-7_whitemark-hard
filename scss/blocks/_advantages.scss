@@ -108,6 +108,12 @@
       font-size: 14px;
       line-height: 18px;
     }
+
+    &:hover,
+    &:focus-visible {
+      color: $color-white-50;
+      outline: none;
+    }
   }
 
   &__link--active {
@@ -122,5 +128,3 @@
     pointer-events: none;
   }
 }
-
-

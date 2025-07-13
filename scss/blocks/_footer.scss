@@ -88,6 +88,12 @@
       font-size: 12px;
       line-height: 14px;
     }
+
+    &:hover,
+    &:focus-visible {
+      color: $color-white-50;
+      outline: none;
+    }
   }
 
   &__left-link {
@@ -101,6 +107,12 @@
     @include vp-1023 {
       font-size: 16px;
       line-height: 22px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: $color-white-50;
+      outline: none;
     }
   }
 
@@ -132,6 +144,12 @@
     color: $color-white-50;
     text-transform: uppercase;
     letter-spacing: -0.02em;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-white;
+      outline: none;
+    }
   }
 
   &__copyright {
@@ -152,6 +170,12 @@
 
   &__copyright-second-link {
     text-decoration: underline;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-white-50;
+      outline: none;
+    }
   }
 
   &__inner {

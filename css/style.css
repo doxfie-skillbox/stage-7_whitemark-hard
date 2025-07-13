@@ -543,6 +543,11 @@ a {
     display: none;
   }
 }
+.header__btn:hover, .header__btn:focus-visible {
+  color: #2a52a3;
+  background-color: #ffffff;
+  outline: none;
+}
 .header__phone {
   font-size: 18px;
   line-height: 24px;
@@ -552,6 +557,10 @@ a {
     font-size: 14px;
     line-height: 18px;
   }
+}
+.header__phone:hover, .header__phone:focus-visible {
+  color: rgba(255, 255, 255, 0.5);
+  outline: none;
 }
 @media (max-width: 767px) {
   .header__phone-link {
@@ -1341,6 +1350,10 @@ a {
          column-gap: 8px;
   }
 }
+.privacy__link:hover, .privacy__link:focus-visible {
+  color: #94a8d1;
+  outline: none;
+}
 .privacy__link-icon {
   pointer-events: none;
 }
@@ -1480,6 +1493,10 @@ a {
     line-height: 18px;
   }
 }
+.advantages__link:hover, .advantages__link:focus-visible {
+  color: rgba(255, 255, 255, 0.5);
+  outline: none;
+}
 .advantages__link--active {
   color: rgba(255, 255, 255, 0.5);
   pointer-events: none;
@@ -1582,6 +1599,10 @@ a {
     line-height: 14px;
   }
 }
+.footer__left-link:hover, .footer__left-link:focus-visible, .footer__right-link:hover, .footer__right-link:focus-visible {
+  color: rgba(255, 255, 255, 0.5);
+  outline: none;
+}
 .footer__left-link {
   align-self: flex-end;
 }
@@ -1594,6 +1615,10 @@ a {
     font-size: 16px;
     line-height: 22px;
   }
+}
+.footer__phone:hover, .footer__phone:focus-visible {
+  color: rgba(255, 255, 255, 0.5);
+  outline: none;
 }
 .footer__right-link {
   align-self: flex-start;
@@ -1622,6 +1647,10 @@ a {
   text-transform: uppercase;
   letter-spacing: -0.02em;
 }
+.footer__nav-link:hover, .footer__nav-link:focus-visible {
+  color: #ffffff;
+  outline: none;
+}
 .footer__copyright {
   max-width: 840px;
   margin: 0 0 40px;
@@ -1641,6 +1670,10 @@ a {
 }
 .footer__copyright-second-link {
   text-decoration: underline;
+}
+.footer__copyright-second-link:hover, .footer__copyright-second-link:focus-visible {
+  color: rgba(255, 255, 255, 0.5);
+  outline: none;
 }
 .footer__inner {
   display: grid;
@@ -1701,6 +1734,10 @@ a {
 .socials__link {
   display: flex;
   color: rgba(255, 255, 255, 0.2);
+}
+.socials__link:hover, .socials__link:focus-visible {
+  color: #ffffff;
+  outline: none;
 }
 
 .location {
