@@ -114,6 +114,12 @@
       color: $color-white-50;
       outline: none;
     }
+
+    &:hover {
+      .advantages__link-icon {
+        display: unset;
+      }
+    }
   }
 
   &__link--active {

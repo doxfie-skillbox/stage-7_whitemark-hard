@@ -1490,6 +1490,9 @@ a {
   color: rgba(255, 255, 255, 0.5);
   outline: none;
 }
+.advantages__link:hover .advantages__link-icon {
+  display: unset;
+}
 .advantages__link--active {
   color: rgba(255, 255, 255, 0.5);
   pointer-events: none;
